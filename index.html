@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Conquest — Multi Category</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="start-screen">
+    <h1>Quiz Conquest</h1>
+    <input id="username-input" type="text" placeholder="Enter your name" />
+    <button id="start-btn">Start</button>
+  </div>
+
+  <div id="level-selection" class="hidden">
+    <h2>Welcome, <span id="username-display"></span></h2>
+    <h3>Select Level</h3>
+    <div class="level-buttons">
+      <button data-level="easy">Easy</button>
+      <button data-level="medium">Medium</button>
+      <button data-level="hard">Hard</button>
+      <button data-level="extreme">Extreme</button>
+    </div>
+  </div>
+
+  <div id="category-selection" class="hidden">
+    <h3>Select Category</h3>
+    <div class="category-buttons">
+      <button data-cat="coding">Coding</button>
+      <button data-cat="movies">Movies</button>
+      <button data-cat="sports">Sports</button>
+    </div>
+  </div>
+
+  <div id="quiz-container" class="hidden">
+    <h1 id="level-title"></h1>
+    <h2 id="category-title"></h2>
+    <div id="progress-bar">
+      <div id="progress-fill"></div>
+    </div>
+    <div id="question-box"></div>
+    <div id="options-box"></div>
+    <div id="timer">⏱ Time Left: <span id="time">10</span>s</div>
+    <div id="feedback"></div>
+    <button id="next-btn">Next</button>
+    <button id="restart-btn">Restart</button>
+    <div id="score-box"></div>
+    <div id="high-score-box"></div>
+  </div>
+
+  <audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+  <audio id="wrong-sound" src="wrong.mp3" preload="auto"></audio>
+
+  <script src="confetti.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
